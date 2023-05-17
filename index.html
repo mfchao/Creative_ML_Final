@@ -8,22 +8,41 @@
     </header>
 
     <body>
-        <p>A custom OpenAI webapp for Dall-E</p>
+        <div class="smallText1">
+        <h1>CREATIVE <br> MACHINE <br> LEARNING</h1>
+        </div>
 
-        <fieldset>
-            <legend>Setup</legend>
-            <div>
-                Please enter your <a href="https://www.youtube.com/watch?v=DFmmiYlbgX0&list=PLx3k0RGeXZ_zs3az0Z2BnpTIPH2lxQfFX&index=4" target="_blank">OpenAI API Key</a>: <input id="api-key" value="YOUR-API-KEY-HERE">
-            </div>
-        </fieldset>
+        <div class="API">
 
-        <fieldset>
-            <legend>Request parameters</legend>
-            <div>
-                <textarea id="text-prompt" rows="4" cols="52">An isometric view of a miniature city, tilt shift, bokeh, voxel, vray render, high detail</textarea>
+        <div class="input-contain">
+            <input type="text" class="input1" id="fname" name="fname" autocomplete="off" value="" aria-labelledby="placeholder-fname">
+            <label class="placeholder-text1" for="fname" id="placeholder-fname">
+               <div class="text1">API Key</div>
+            </label>
+          </div>
+        </div>
+   
+
+        <div class="InputPrompt">
+            <h2>Create A Facade <br> That Is...</h2>
+            <div class="input-contain">
+                <input type="text" class="input2" id="fname" name="fname" autocomplete="off" value="" aria-labelledby="placeholder-fname">
+                <label class="placeholder-text2" for="fname" id="placeholder-fname">
+                   <div class="text2">Prompt</div>
+                </label>
+              </div>
+
+              <div>
+                <button id="button-request">Generate</button>
             </div>
+            </div>
+
+           
+            
+                <!-- <textarea id="text-prompt" rows="4" cols="52">An isometric view of a miniature city, tilt shift, bokeh, voxel, vray render, high detail</textarea> -->
+       
     
-            <div>
+            <!-- <div>
                 Image count (1-4): <input id="image-count" value="1">
             </div>
     
@@ -42,27 +61,56 @@
             <div>
                 <input type="radio" id="radio-1024" name="image-size" value="1024">
                 <label for="1024">1024</label>
-            </div>
+            </div> -->
     
-            <div>
-                <button id="button-request">Request</button>
-            </div>
-        </fieldset>
+            
+        </div>
 
-        <fieldset>
-            <legend>Request Status</legend>
+        <div class="status">
             <div>
                 <p id="request-status">No request performed yet</p>
             </div>
-        </fieldset>
+        </div>
 
-        <fieldset>
-            <legend>Images</legend>
+        <!-- <div class="verticalText1">
+            <p>Last Updated  <br> May 2023</p>
+        </div> -->
+       
+            <div  class="by">
+                <h1>Benson Xie, Maggie Chao, Bingyu Guo</h1>
+            </div>
+            <div class="description">
+                <p>A text to architectural facade generator. <br> 
+                Created using Dall-E and CycleGANs.</p>
+            </div>
+      
+        <div class="line1"></div>
+
+        <div class="ImageContainer">
+
+            <div class="imagePlaceholder">
+                <img src="/Images/image.png"> </img>
+            </div>
 
             <!-- Response images will be added here -->
             <div id="image-container"></div>
 
-        </fieldset>
+        </div>
+
+        <div class="line2"></div>
+
+        <div class="box1">
+            <p>MIT 4.453</p>
+        </div>
+
+        <div class="box2">
+            <p class="verticalText2">Final Project</p>
+        </div>
+
+        <div class="box3">
+            <p class="verticalText2">GSD MDes Mediums</p>
+        </div>
+       
 
         <script type="text/javascript" src="script.js"></script>
     </body>
