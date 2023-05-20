@@ -11,15 +11,24 @@
 fieldset {
     margin-bottom: 8px;
 } */
+
+#container3d canvas {
+    width: 100vw !important;
+    height: 100vh !important;
+    position: absolute;
+    top:50%;
+    left:50%;
+
+}
 .input-contain{
     position: relative;
 }
 .input1 {
     height: 2.0rem;
     width: 12rem;
-    border: 1.5px solid black;
+    border: 1.3px solid black;
     border-radius: 0.4em;
-    background-color: #e6e2d7;
+    background-color: #f0f0f0;
 
 }
 
@@ -33,6 +42,7 @@ fieldset {
     background-color: transparent;
     display: flex;
     align-items: center;
+    font-weight: 20;
 }
 
 .placeholder-text1 {
@@ -43,7 +53,7 @@ fieldset {
     font-size: 0.7rem;
     padding: 0.2rem;
     color: black;
-    background-color: #e6e2d7;
+    background-color: #f0f0f0;
 
 }
 
@@ -58,7 +68,7 @@ fieldset {
 }
 
 .input1:focus + .placeholder-text1 .text1{
-    background-color: #e6e2d7;
+    background-color: #f0f0f0;
     font-size: 0.7rem;
     color: black;
     transform: translate(0, -60%);
@@ -76,10 +86,10 @@ fieldset {
 
 .input2 {
     height: 4.0rem;
-    width: 25rem;
-    border: 2px solid black;
+    width: 20rem;
+    border: 1.5px solid black;
     border-radius: 1em;
-    background-color: #e6e2d7;
+    background-color: #f0f0f0;
 
 }
 
@@ -93,6 +103,7 @@ fieldset {
     background-color: transparent;
     display: flex;
     align-items: center;
+    font-weight: 20;
 }
 
 .placeholder-text2 {
@@ -103,7 +114,7 @@ fieldset {
     font-size: 1rem;
     padding: 0.2rem;
     color: black;
-    background-color: #e6e2d7;
+    background-color: #f0f0f0;
 
 }
 
@@ -118,7 +129,7 @@ fieldset {
 }
 
 .input2:focus + .placeholder-text2 .text2{
-    background-color: #e6e2d7;
+    background-color: #f0f0f0;
     font-size: 0.7rem;
     color: black;
     transform: translate(0, -170%);
@@ -139,7 +150,7 @@ button {
     border-radius: 3px;
     font-size: 12px;
     cursor: pointer;
-    margin-top: 10px;
+    margin-top: 30px;
     letter-spacing: .05em;
   }
 
@@ -151,7 +162,7 @@ button {
 body {
     margin:0;
     min-height: 100%;
-    background-color: #e6e2d7;
+    background-color: #f0f0f0;
     /* font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; */
     font-family: 'Neue Montreal', sans-serif;
     letter-spacing: .05em;
@@ -168,9 +179,18 @@ h1 {
 }
 
 h2 {
-    font-size: 4em;
+    font-size: 2em;
     font-weight: 550;
     letter-spacing: .03em;
+    margin: 0;
+}
+
+h3 {
+    font-size: 1.7em;
+    font-weight: 100;
+    letter-spacing: .03em;
+    margin-top: 3px;
+    margin-bottom: 15px;
 }
 
 p {
@@ -196,10 +216,11 @@ a {
 
 .API {
     position: absolute;
-    top: 50px;
-    left: 40%;
+    top: 60px;
+    left: 20%;
     font-size: smaller;
     line-height: 1.7em;
+    z-index: 99999;
 }
 
 .InputPrompt {
@@ -207,10 +228,11 @@ a {
     margin-left: 50px;
     position: absolute;
     margin-bottom: 0;
+    z-index: 99999;
 }
 
 .status {
-    margin-top: 45%;
+    margin-top: 30%;
     margin-left: 50px;
     position: absolute;
     font-size: 0.67em;
@@ -220,54 +242,111 @@ a {
 img {
     max-height: 100%; /* Makes the image fit the container's height */
     max-width: 100%;
-    border-radius: 1.5em;
+    border-radius: 1em;
     justify-content: center;
 }
 
-.ImageContainer {
-    margin-left: 64vw;
+.imagePlaceholder{
+    position: absolute;
+    top: 35%;
+    left: 72%;
+    height: 30vh;
+}
+
+.imagePlaceholder1{
+    position: absolute;
+    top: 35%;
+    left: 85%;
+    height: 30vh;
+}
+
+.ModelContainer {
+    margin-left: 35%;
     width: 30%;
     height: 100vh;
     position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 9999;
+}
+
+.imageText {
+    font-family: 'Neue Montreal', sans-serif;
+    font-size: 0.7em;
+    position: absolute;
+    font-weight: 350;
+    top: 30%;
+    left: 72%;
 }
 
 
 
-.verticalText1 {
+.verticalText1a {
     -ms-transform: rotate(-90deg);
     transform: rotate(-90deg);
     font-size: .7em;
-    font-weight: 200;
+    font-weight: 500;
     letter-spacing: .04em;
     position: absolute;
-    margin-top: 50%;
-    margin-left: 20px;
+    margin-top: 42.5%;
+    margin-left: 87.2%;
+    
+}
+
+.verticalText1b {
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    font-size: .7em;
+    font-weight: 500;
+    letter-spacing: .04em;
+    position: absolute;
+    margin-top: 48.9%;
+    margin-left: 87.7%;
+    
 }
 
 .verticalText2 {
-    -ms-transform: rotate(-90deg);
-    transform: rotate(-90deg);
-    font-size: .7em;
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    font-size: 18em;
     font-weight: 400;
     letter-spacing: .04em;
     position: absolute;
-    color:rgb(0, 0, 0);
+    color:rgb(255, 255, 255);
+    margin-left: 620px;
+    margin-bottom: 285px;
+    font-family: 'Pixelated'; 
+    font-weight: 900;
+    letter-spacing: 0;
+}
+
+.verticalText3 {
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    font-size: 15em;
+    font-weight: 400;
+    letter-spacing: .04em;
+    position: absolute;
+    color:rgb(255, 255, 255);
+    font-family:  'Pixelated'; 
+    font-weight: 900;
+    letter-spacing: 0;
+    margin-top: 250px;
+
 }
 
 .by {
     position: absolute;
-    margin-top: 45%;
-    margin-left: 40%;
+    margin-top: 42%;
+    margin-left: 50px;
 }
 
 .description{
     position: absolute;
     font-size: .7em;
-    margin-top: 48%;
-    margin-left: 40%;
+    margin-top: 44%;
+    margin-left: 50px;
 }
 
 .bar {
@@ -281,27 +360,30 @@ img {
 }
 
 .line1 {
-    margin-left: 62vw;
-    border-left: 1px solid rgb(175, 175, 175);
-    height: 100vh; /* Set the height of the line as required */
+    border-top: 1px solid rgb(175, 175, 175);
+    width: 507px; /* Set the width of the line as required */
+    margin-top: 8%;
+    margin-left: 50px;
     position: absolute;
 }
 
 .line2 {
     margin-left: 96vw;
-    border-left: 1px solid rgb(175, 175, 175);
-    height: 100vh; /* Set the height of the line as required */
+    border-left: 1.5px solid rgb(0, 0, 0);
+    height: 40px; /* Set the height of the line as required */
     position: absolute;
+    margin-top: 45%;
+    margin-left: 88%;
 }
 
 .box1 {
     position: absolute;
-    top: 10%;
-    left: 98%;
+    top: 8%;
+    left: 85%;
     transform: translate(-50%, -50%);
-    background-color: #000000;
+    background-color: #ffffff;
     width: 50px; /* Set the desired width of the container */
-    height: 150px; /* Set the desired height of the container */
+    height: 100px; /* Set the desired height of the container */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -315,14 +397,32 @@ img {
     font-weight: 200;
     letter-spacing: .04em;
     position: absolute;
-    color:antiquewhite;
+    color:rgb(0, 0, 0);
    
 }
 
-.box2 {
+.mit {
+    position: absolute;
+    margin-top: 60px;
+    margin-left: 92vw;
+    font-family: 'Neue Montreal', sans-serif;
+    font-size: 0.7em;
+    font-weight: 400;
+}
+
+.date {
+    position: absolute;
+    margin-top: 60px;
+    margin-left: 87vw;
+    font-family: 'Neue Montreal', sans-serif;
+    font-size: 0.7em;
+    font-weight: 400;
+}
+
+.title {
     position: absolute;
     top: 50%;
-    left: 98%;
+    left: 40%;
     transform: translate(-50%, -50%);
     width: 60px; /* Set the desired width of the container */
     height: 300px; /* Set the desired height of the container */
@@ -334,25 +434,18 @@ img {
 
 .box3 {
     position: absolute;
-    top: 90%;
-    left: 98%;
+    top: 95%;
+    left: 99%;
     transform: translate(-50%, -50%);
-    background-color: #9da7a6;
+    background-color: #ffffff;
     width: 50px; /* Set the desired width of the container */
-    height: 150px; /* Set the desired height of the container */
+    height: 100px; /* Set the desired height of the container */
     display: flex;
     align-items: center;
     justify-content: center;
     white-space: nowrap;
 }
 
-#container3d canvas {
-    width: 100vw !important;
-    height: 100vh !important;
-    position: absolute;
-    top:0;
-    left:0;
 
-}
 
 
