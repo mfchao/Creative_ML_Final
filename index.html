@@ -26,7 +26,7 @@
         <div class="InputPrompt">
             <h2>DEEPFACADE</h2>
             <h3>Create A Facade That Is...</h3>
-            <div class="input-contain">
+            <div class="input-contain" id="input">
                 <input type="text" class="input2" id="fname" name="fname" autocomplete="off" value="" aria-labelledby="placeholder-fname">
                 <label class="placeholder-text2" for="fname" id="placeholder-fname">
                    <div class="text2">Prompt</div>
@@ -95,13 +95,17 @@
         </div>
 
         <p class="imageText">IMAGES:</p>
-
-        <div class="imagePlaceholder">
-            <img src="/Images/tester1.png"> </img>
-        </div>
-        <div class="imagePlaceholder1">
-            <img src="/Images/tester2.png"> </img>
-        </div>
+        <div class="imageScroll">
+            <div class="imagePlaceholder">
+                <img src="/Images/tester1.png"> </img>
+            </div>
+            <div class="imagePlaceholder1">
+                <img src="/Images/tester2.png"> </img>
+            </div>
+            <div class="imagePlaceholder2">
+                <img src="/Images/tester3.png"> </img>
+            </div>
+         </div>
 
         <div class="line2"></div>
         <p class="verticalText1a">ITER</p>
@@ -123,7 +127,7 @@
         </div>
        
         <!-- <script src="three.min.js"></script> -->
-        <script src="script.js"></script>
+        <!-- <script src="script.js"></script> -->
         <script type="module" src="3D.js"></script>
 
     </body>

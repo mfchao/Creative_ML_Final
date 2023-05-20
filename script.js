@@ -16,17 +16,17 @@ reqButton.onclick = function () {
   reqStatus.innerHTML = "Request started...";
 
   // Fetch image request data
-  const key = document.getElementById('api-key').value;
-  const prompt = document.getElementById('text-prompt').value;
-  const count = Number(document.getElementById('image-count').value);
-  const radios = document.getElementsByName('image-size');
-  let size;
-  for (let i = 0; i < radios.length; i++) {
-    if (radios[i].checked) {
-      size = Number(radios[i].value);
-      break;
-    }
-  }
+//   const key = document.getElementById('api-key').value;
+//   const prompt = document.getElementById('text-prompt').value;
+//   const count = Number(document.getElementById('image-count').value);
+//   const radios = document.getElementsByName('image-size');
+//   let size;
+//   for (let i = 0; i < radios.length; i++) {
+//     if (radios[i].checked) {
+//       size = Number(radios[i].value);
+//       break;
+//     }
+//   }
 
   // These can be handled by the server
   // // Some validity checks.
@@ -58,32 +58,34 @@ reqButton.onclick = function () {
 
   // Form the request body according to the API:
   // https://beta.openai.com/docs/api-reference/images/create
-  const reqBody = {
-    prompt: prompt,
-    n: count,
-    size: size + "x" + size,
-    response_format: 'url',
-  };
+//   const reqBody = {
+//     prompt: prompt,
+//     n: count,
+//     size: size + "x" + size,
+//     response_format: 'url',
+//   };
 
-  // Form the data for a POST request:
-  const reqParams = {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization': `Bearer ${key}`,
-    },
-    body: JSON.stringify(reqBody)
-  }
+//   // Form the data for a POST request:
+//   const reqParams = {
+//     method: 'POST',
+//     headers: {
+//       'Content-Type': 'application/json',
+//       'Authorization': `Bearer ${key}`,
+//     },
+//     body: JSON.stringify(reqBody)
+//   }
 
-  // Use the Fetch API to do an async POST request to OpenAI:
-  // https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
-  fetch(dalleEndpoint, reqParams)
-    .then(res => res.json())
-    .then(json => addImages(json, prompt))
-    .catch(error => {
-        reqStatus.innerHTML = error;
-        reqButton.disabled = false;
-    });
+//   // Use the Fetch API to do an async POST request to OpenAI:
+//   // https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
+//   fetch(dalleEndpoint, reqParams)
+//     .then(res => res.json())
+//     .then(json => addImages(json, prompt))
+//     .catch(error => {
+//         reqStatus.innerHTML = error;
+//         reqButton.disabled = false;
+//     });
+    
+
 }
 
 
