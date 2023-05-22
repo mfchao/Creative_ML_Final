@@ -227,7 +227,7 @@ a {
     left: 20%;
     font-size: smaller;
     line-height: 1.7em;
-    z-index: 99999;
+    z-index: 999999;
 }
 
 .InputPrompt {
@@ -235,7 +235,7 @@ a {
     margin-left: 50px;
     position: fixed;
     margin-bottom: 0;
-    z-index: 99999;
+    z-index: 999999;
 }
 
 .status {
@@ -260,20 +260,38 @@ img {
     height: 30vh;
 }
 
-.imagePlaceholder1{
+.first{
     position: absolute;
     top: 35%;
     left: 85%;
     height: 30vh;
 }
 
-.imagePlaceholder2{
+.second{
     position: absolute;
     top: 35%;
     left: 98%;
     height: 30vh;
     overflow: visible;
-    z-index: 9999;
+    z-index: 999;
+}
+
+.third{
+    position: absolute;
+    top: 35%;
+    left: 111%;
+    height: 30vh;
+    overflow: visible;
+    z-index: 999;
+}
+
+.fourth{
+    position: absolute;
+    top: 35%;
+    left: 124%;
+    height: 30vh;
+    overflow: visible;
+    z-index: 999;
 }
 
 .ModelContainer {
@@ -284,7 +302,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 9999;
+    z-index: 99999;
 }
 
 .imageText {
@@ -405,6 +423,21 @@ img {
     justify-content: center;
     white-space: nowrap;
 }
+
+.boxhider {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f0f0f0;
+    width: 500px; /* Set the desired width of the container */
+    height: 500px; /* Set the desired height of the container */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    z-index: 999;
+}
   
 .box1 p {
     -ms-transform: rotate(-90deg);
@@ -446,6 +479,7 @@ img {
     align-items: center;
     justify-content: center;
     white-space: nowrap;
+    z-index: 9999;
 }
 
 .box3 {

@@ -13,14 +13,15 @@ const reqStatus = document.getElementById('request-status');
 const inputPrompt = document.getElementById('input');
 
 const image1 = document.querySelector('.imagePlaceholder img');
-const image2 = document.querySelector('.imagePlaceholder1 img');
-const image3 = document.querySelector('.imagePlaceholder2 img');
+const image2 = document.querySelector('.imagePlaceholder.first');
+const image3 = document.querySelector('.imagePlaceholder.second');
+const image4 = document.querySelector('.imagePlaceholder.third');
+const image5 = document.querySelector('.imagePlaceholder.fourth');
 
 
-
-const imageArray = [image1, image2, image3];
+const imageArray = [image1, image2, image3, image4, image5];
 // Create an array of facade model names
-const facadeModels = ['facade1', 'facade2', 'facade3'];
+const facadeModels = ['facade1', 'facade2', 'facade3', 'facade4', 'facade5'];
 
 // Keep track of the current facade model index
 let facadeModelIndex = 0;
@@ -155,7 +156,7 @@ function loadFacadeModel() {
     );
   
     // Increment the facade model index for the next click
-    if (facadeModelIndex <= 2) {
+    if (facadeModelIndex <= 4) {
         facadeModelIndex++;
     } else {
         facadeModelIndex = 0;
@@ -174,30 +175,32 @@ function loadFacadeModel() {
     inputPrompt.removeEventListener('click', handleClick);
   }
 
-  const imagePlaceholders = document.querySelectorAll('.imageScroll .imagePlaceholder');
-  const threshold = 75; // Adjust this value as needed
+//   const imagePlaceholders = document.querySelectorAll('.imageScroll .imagePlaceholder');
+//   const threshold = 50; // Adjust this value as needed
 
-// Function to handle scroll event
-function handleScroll() {
-  // Get the current scroll position
-  const scrollPosition = window.scrollX || window.pageXOffset;
+// // Function to handle scroll event
+// function handleScroll() {
+//     // Get the current scroll position
+//     const scrollPosition = window.scrollX || window.pageXOffset;
+  
+//     // Iterate over each image placeholder
+//     imagePlaceholders.forEach((placeholder, index) => {
+//       // Calculate the threshold for each image placeholder
+//       const placeholderThreshold = threshold * (index + 1);
+  
+//       // Check if the scroll position exceeds the threshold for the current image placeholder
+//       if (scrollPosition > placeholderThreshold) {
+//         // Hide the image placeholder with fade-out effect
+//         placeholder.classList.add('hidden');
+//       } else {
+//         // Show the image placeholder
+//         placeholder.classList.remove('hidden');
+//       }
+//     });
+//   }
 
-  // Check if the scroll position exceeds the threshold
-  if (scrollPosition > threshold) {
-    // Hide the image placeholders with fade-out effect
-    imagePlaceholders.forEach((placeholder) => {
-      placeholder.classList.add('hidden');
-    });
-  } else {
-    // Show the image placeholders
-    imagePlaceholders.forEach((placeholder) => {
-      placeholder.classList.remove('hidden');
-    });
-  }
-}
-
-// Add scroll event listener
-window.addEventListener('scroll', handleScroll);
+// // Add scroll event listener
+// window.addEventListener('scroll', handleScroll);
 
   
 
